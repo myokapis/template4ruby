@@ -12,7 +12,6 @@ Field markers designate the location of fields that may be replaced with data wh
 
 ### Example
 An example template containing html markup, nested sections, and field markers follows:
-
 ```html
   <html>
   <body>
@@ -30,7 +29,7 @@ An example template containing html markup, nested sections, and field markers f
     </div>
   </body>
   </html>
-```html
+```
 
 ## Why Templates?
 Template4Ruby was created to separate html markup from the code that generates the web page output. It is ideal for partial pages because there is no need to place partial page content in a separate file. Partial page content can be wrapped in a section within the main page. The template writer can generate a full page or just the section(s) that are needed.
@@ -142,4 +141,4 @@ end
 
 et = ExampleTemplate.new()
 et.write
-```ruby
+```
