@@ -1,18 +1,19 @@
-= Template4Ruby
+# Template4Ruby
 Template4Ruby provides functionality for generating html and other document formats from templates.
 
-== Templates
+## Templates
 Templates consist of three parts - sections, field markers, and text. Text can be plain text, markup, or any other text format that does not conflict with the template structure.
 
-=== Sections
+### Sections
 Sections separate the template into blocks of text that can be manipulated separately from the rest of the template. Each section has a beginning section marker and an ending section marker. Section markers follow the format of <!-- @@SECTION_NAME@@ -->. All text between a pair of section markers is considered part of the section. Sections may contain other sections, text, and/or field markers.
 
-=== Field Markers
+### Field Markers
 Field markers designate the location of fields that may be replaced with data when a template is processed. Field markers follow the format of @@field_name@@.
 
-=== Example
+### Example
 An example template containing html markup, nested sections, and field markers follows:
 
+```html
   <html>
   <body>
     <div>
@@ -29,8 +30,9 @@ An example template containing html markup, nested sections, and field markers f
     </div>
   </body>
   </html>
+```html
 
-== Why Templates?
+## Why Templates?
 Template4Ruby was created to separate html markup from the code that generates the web page output. It is ideal for partial pages because there is no need to place partial page content in a separate file. Partial page content can be wrapped in a section within the main page. The template writer can generate a full page or just the section(s) that are needed.
 
 Sections may be appended multiple times with different content which makes generating markup for lists, dropdowns, and tables simple.
@@ -41,9 +43,10 @@ Template4Ruby contains functionality for:
 * Caching parsed templates
 * Creating dynamic documents
 
-= Sample Code
+# Sample Code
 A simple example of using all of the components within Template4Ruby follows.
 
+```ruby
 require 'template4ruby'
 
 class ExampleTemplate
@@ -139,3 +142,4 @@ end
 
 et = ExampleTemplate.new()
 et.write
+```ruby
